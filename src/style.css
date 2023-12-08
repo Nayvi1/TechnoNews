@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: p-extraLight;
+  src: url("./../public/fonts/Poppins-ExtraLight.ttf");
+}
+@font-face {
+  font-family: p-semiBold;
+  src: url("./../public/fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: p-regular;
+  src: url("./../public/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: i-medium;
+  src: url("./../public/fonts/Inter-Medium.ttf");
+}
