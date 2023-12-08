@@ -1,4 +1,11 @@
+import { Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
+
 function App() {
-  return <div className="text-amber-600">App</div>;
+  return (
+    <Routes>
+      <Route index element={<Home />} />
+    </Routes>
+  );
 }
 export default App;
