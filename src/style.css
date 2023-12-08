@@ -4,21 +4,22 @@
 
 @font-face {
   font-family: p-extraLight;
-  src: url("./../public/fonts/Poppins-ExtraLight.ttf");
+  src: url("./../fonts/Poppins-ExtraLight.ttf");
 }
 @font-face {
   font-family: p-semiBold;
-  src: url("./../public/fonts/Poppins-SemiBold.ttf");
+  src: url("./../fonts/Poppins-SemiBold.ttf");
 }
 @font-face {
   font-family: p-regular;
-  src: url("./../public/fonts/Poppins-Regular.ttf");
+  src: url("./../fonts/Poppins-Regular.ttf");
 }
 @font-face {
   font-family: i-medium;
-  src: url("./../public/fonts/Inter-Medium.ttf");
+  src: url("./../fonts/Inter-Medium.ttf");
 }
 
 * {
   font-family: p-regular;
+  color: #e7e6e6;
 }

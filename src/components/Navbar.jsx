@@ -1,12 +1,12 @@
 function Navbar() {
   return (
     <nav className="flex h-8 justify-between pb-1 pt-1">
-      <img src="./svg/hamMenu.svg" alt="" />
+      <img src="./svg/hamMenu.svg" className="cursor-pointer " alt="" />
       <div className="flex items-center">
         <img src="./svg/logo.svg" alt="" />
         <span className="text-offWhite text-lg">Techno News</span>
       </div>
-      <img src="./svg/User.svg" alt="" />
+      <img src="./svg/User.svg" className="cursor-pointer" alt="" />
     </nav>
   );
 }
