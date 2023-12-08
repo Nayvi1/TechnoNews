@@ -18,3 +18,7 @@
   font-family: i-medium;
   src: url("./../public/fonts/Inter-Medium.ttf");
 }
+
+* {
+  font-family: p-regular;
+}

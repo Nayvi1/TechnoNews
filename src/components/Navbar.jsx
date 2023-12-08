@@ -1,0 +1,45 @@
+function Navbar() {
+  return (
+    <nav className="flex h-8 justify-between pb-1 pt-1">
+      <img src="./svg/hamMenu.svg" alt="" />
+      <div className="flex items-center">
+        <img src="./svg/logo.svg" alt="" />
+        <span className="text-offWhite text-lg">Techno News</span>
+      </div>
+      <img src="./svg/User.svg" alt="" />
+    </nav>
+  );
+}
+
+function NavItems() {
+  return (
+    <>
+      <ul>
+        <li>
+          <a href=""></a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href=""></a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href=""></a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href=""></a>
+        </li>
+      </ul>
+    </>
+  );
+}
+
+function NavItemsMobile() {
+  return <></>;
+}
+
+export default Navbar;
