@@ -40,14 +40,14 @@ function Header() {
 function SwiperContainer() {
   return (
     <Swiper
-      slidesPerView={5}
+      slidesPerView={"auto"}
       spaceBetween={10}
       freeMode={true}
       pagination={{
         clickable: true,
       }}
       modules={[FreeMode]}
-      className="mySwiper [&_img]:w-8 mt-4 [&_span]:text-[10px] [&_span]:font-p-extraLight [&_.swiper-slide]:flex [&_.swiper-slide]:flex-col [&_.swiper-slide]:items-center"
+      className="mySwiper [&_img]:w-8 mt-4 [&_span]:text-[10px] [&_span]:font-p-extraLight [&_.swiper-slide]:w-16 [&_.swiper-slide]:flex [&_.swiper-slide]:flex-col [&_.swiper-slide]:items-center"
     >
       <SwiperSlide>
         <img src="./svg/computer.svg" alt="" />
