@@ -1,5 +1,6 @@
 import BlogsSlider from "../components/BlogsSlider";
 import Header from "../components/Header";
+import LatestPosts from "../components/LatestPosts";
 import Navbar from "../components/Navbar";
 
 function Home() {
@@ -7,8 +8,9 @@ function Home() {
     <>
       <Navbar />
       <Header />
-      <BlogsSlider/>
-      
+      <BlogsSlider />
+      <LatestPosts />
+      <BlogsSlider />
     </>
   );
 }

@@ -5,18 +5,28 @@ import Button from "./Button";
 
 import "swiper/css";
 import "swiper/css/free-mode";
+import { useState } from "react";
 
 function BlogsSlider() {
+  const [onBlogTab, setOnBlogTab] = useState(true);
   return (
     <div className="mt-8">
       <h2 className="text-sm border-l-[3px] border-l-kongFoPanda pl-1">
         Editor&apos;s suggestion
       </h2>
       <div className="flex items-center gap-6 mt-4">
-        <Button>Blogs</Button>
-        <Button>Videos</Button>
+        <Button onClick={() => setOnBlogTab(true)} isActive={onBlogTab}>
+          Blogs
+        </Button>
+        <Button onClick={() => setOnBlogTab(false)} isActive={!onBlogTab}>
+          Videos
+        </Button>
       </div>
-      <SwiperContainer />
+      {onBlogTab ? (
+        <SwiperContainer />
+      ) : (
+        " شیر 4 تومنی برسه(قسطی)سلام نیسان دارین؟(سمند)کیکمو خوردن😞😩😩😩😩😩😭(کروسان)هادی یه تراپی برو.لعلی؟گوشت چرخ کنکرم کراکو "
+      )}
     </div>
   );
 }
