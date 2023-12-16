@@ -24,6 +24,11 @@ function Posts() {
         <p className="text-center">Title Here</p>
         <div className="[&_span]:text-[10px] flex items-center justify-around [&_img]:mr-1 [&>div]:flex [&>div]:items-center">
           <div>
+            <img
+              src="./svg/threeDots.svg"
+              className="cursor-pointer pr-4"
+              alt=""
+            />
             <img src="./svg/like.svg" alt="" />
             <span>28</span>
           </div>
@@ -31,10 +36,9 @@ function Posts() {
             <img src="./svg/calendar.svg" alt="" />
             <span>a day ago</span>
           </div>
-          <img src="./svg/threeDots.svg" className="cursor-pointer" alt="" />
         </div>
       </div>
-      <img src="./img/chess.png" alt="" className="" />
+      <img src="./img/chess.png" alt="" className="w-32" />
     </div>
   );
 }

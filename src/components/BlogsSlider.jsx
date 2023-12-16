@@ -6,13 +6,13 @@ import Button from "./Button";
 import "swiper/css";
 import "swiper/css/free-mode";
 import { useState } from "react";
-
-function BlogsSlider() {
+/* eslint-disable react/prop-types */
+function BlogsSlider({ grayBg = false, title = "Editor's suggestion" }) {
   const [onBlogTab, setOnBlogTab] = useState(true);
   return (
-    <div className="mt-8">
+    <div className={`mt-8 ${grayBg ? "bg-semiGray" : ""}`}>
       <h2 className="text-sm border-l-[3px] border-l-kongFoPanda pl-1">
-        Editor&apos;s suggestion
+        {title}
       </h2>
       <div className="flex items-center gap-6 mt-4">
         <Button onClick={() => setOnBlogTab(true)} isActive={onBlogTab}>

@@ -11,6 +11,7 @@ function Home() {
       <BlogsSlider />
       <LatestPosts />
       <BlogsSlider />
+      <BlogsSlider grayBg title="Best technews blogs" />
     </>
   );
 }
