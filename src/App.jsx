@@ -3,7 +3,7 @@ import Home from "./Pages/Home";
 
 function App() {
   return (
-    <div className="w-full pl-5 pr-5 bg-semiBlack">
+    <div className="w-full [&>*]:px-5 [&>*]:sm:px-11 bg-semiBlack overflow-hidden relative">
       <Routes>
         <Route index element={<Home />} />
       </Routes>

@@ -10,8 +10,8 @@ import { useState } from "react";
 function BlogsSlider({ grayBg = false, title = "Editor's suggestion" }) {
   const [onBlogTab, setOnBlogTab] = useState(true);
   return (
-    <div className={`mt-8 ${grayBg ? "bg-semiGray" : ""}`}>
-      <h2 className="text-sm border-l-[3px] border-l-kongFoPanda pl-1">
+    <div className={`mt-8 relative ${grayBg ? "bg-semiGray pt-5 pb-5" : ""}`}>
+      <h2 className="text-sm border-l-[3px] border-l-kongFoPanda pl-1 relative">
         {title}
       </h2>
       <div className="flex items-center gap-6 mt-4">

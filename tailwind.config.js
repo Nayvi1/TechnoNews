@@ -18,6 +18,12 @@ export default {
         "p-regular": "p-regular",
         "i-medium": "i-medium",
       },
+      keyframes: {
+        wiggle: {
+          "99%": { display: "flex" },
+          "100%": { display: "none" },
+        },
+      },
     },
   },
   plugins: [],
