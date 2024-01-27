@@ -5,28 +5,49 @@ import Button from "./Button";
 
 import "swiper/css";
 import "swiper/css/free-mode";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+// import SwitchRenderer from "./SwitchRenderer";
+import IsMobile from "./IsMobile";
 /* eslint-disable react/prop-types */
-function BlogsSlider({ grayBg = false, title = "Editor's suggestion" }) {
-  const [onBlogTab, setOnBlogTab] = useState(true);
+function BlogsSlider({
+  grayBg = false,
+  title = "Editor's suggestion",
+  tabs = {},
+}) {
+  const [tabText, setTabText] = useState(undefined);
+
+  useEffect(() => {
+    setTabText(Object.keys(tabs)[0]);
+  }, [tabs]);
+  console.log();
   return (
     <div className={`mt-8 relative ${grayBg ? "bg-semiGray pt-5 pb-5" : ""}`}>
       <h2 className="text-sm border-l-[3px] border-l-kongFoPanda pl-1 relative">
         {title}
       </h2>
       <div className="flex items-center gap-6 mt-4">
-        <Button onClick={() => setOnBlogTab(true)} isActive={onBlogTab}>
-          Blogs
-        </Button>
-        <Button onClick={() => setOnBlogTab(false)} isActive={!onBlogTab}>
-          Videos
-        </Button>
+        {Object.keys(tabs).map((tab) => {
+          return (
+            <Button
+              key={tab}
+              onClick={() => setTabText(tab)}
+              isActive={tabText}
+            >
+              {tab}
+            </Button>
+          );
+        })}
       </div>
-      {onBlogTab ? (
+      <div className="flex">
+        <IsMobile nonMobile={<img src="./svg/arrow left big.svg" alt="" />} />
         <SwiperContainer />
-      ) : (
-        " شیر 4 تومنی برسه(قسطی)سلام نیسان دارین؟(سمند)کیکمو خوردن😞😩😩😩😩😩😭(کروسان)هادی یه تراپی برو.لعلی؟گوشت چرخ کنکرم کراکو "
-      )}
+        <IsMobile
+          nonMobile={
+            <img src="./svg/arrow left big.svg" alt="" className="rotate-180" />
+          }
+        />
+      </div>
+      {/* {tabs[tabText]} */}
     </div>
   );
 }
