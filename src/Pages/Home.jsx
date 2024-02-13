@@ -57,6 +57,7 @@ function Home() {
               }
         }
       />
+      <p>test</p>
       <Footer />
     </>
   );
