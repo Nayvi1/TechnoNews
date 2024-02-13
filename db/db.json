@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "title": "Computer",
+      "image": "./svg/computer.svg"
+    },
+    {
+      "title": "Hard Drive",
+      "image": "./svg/hdd.svg"
+    },
+    {
+      "title": "Headset",
+      "image": "./svg/headset.svg"
+    },
+    {
+      "title": "Server",
+      "image": "./svg/server.svg"
+    },
+    {
+      "title": "Laptop",
+      "image": "./svg/laptop.svg"
+    },
+    {
+      "title": "Mouse",
+      "image": "./svg/mouse.svg"
+    },
+    {
+      "title": "Headset",
+      "image": "./svg/headset.svg"
+    },
+    {
+      "title": "Server",
+      "image": "./svg/server.svg"
+    },
+    {
+      "title": "Laptop",
+      "image": "./svg/laptop.svg"
+    },
+    {
+      "title": "Mouse",
+      "image": "./svg/mouse.svg"
+    },
+    {
+      "title": "Cable",
+      "image": "./svg/cable.svg"
+    }
+  ]
+}

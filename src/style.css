@@ -22,4 +22,5 @@
 * {
   font-family: p-regular;
   color: #e7e6e6;
+  user-select: none;
 }

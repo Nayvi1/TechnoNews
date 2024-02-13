@@ -6,8 +6,25 @@ import "swiper/css/free-mode";
 import useMobile from "../hooks/useMobile";
 import LinkButton from "./LinkButton";
 import IsMobile from "./IsMobile";
+import { useEffect, useState } from "react";
 
 function Header() {
+  const [items, setItems] = useState([]);
+
+  async function fetchItems() {
+    try {
+      const res = await fetch("http://localhost:3000/items");
+      const data = await res.json();
+      console.log(data);
+      setItems(data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  useEffect(() => {
+    fetchItems();
+  }, []);
   const isMobile = useMobile();
 
   return (
@@ -59,6 +76,7 @@ function Header() {
                 width="w-1/2"
                 spaceBetween={30}
                 imgWidth={"w-14"}
+                items={items}
               />
               <img src="./svg/arrow left.svg" alt="" className="rotate-180" />
             </>
@@ -67,8 +85,8 @@ function Header() {
         <IsMobile
           mobile={
             <>
-              <SwiperContainer />
-              <SwiperContainer />
+              <SwiperContainer items={items} />
+              <SwiperContainer items={items} />
               <LinkButton />
             </>
           }
@@ -82,6 +100,7 @@ function SwiperContainer({
   imgWidth = "w-8",
   spaceBetween = 10,
   width = "auto",
+  items = [],
 }) {
   return (
     <Swiper
@@ -94,42 +113,14 @@ function SwiperContainer({
       modules={[FreeMode]}
       className={`mySwiper ${width} [&_img]:${imgWidth} mt-4 [&_span]:text-[10px] [&_span]:font-p-extraLight [&_.swiper-slide]:w-16 [&_.swiper-slide]:flex [&_.swiper-slide]:flex-col [&_.swiper-slide]:items-center`}
     >
-      <SwiperSlide>
-        <img src="./svg/computer.svg" alt="" />
-        <span>computer</span>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="./svg/hdd.svg" alt="" />
-        <span>computer</span>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="./svg/headset.svg" alt="" />
-        <span>computer</span>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="./svg/server.svg" alt="" />
-        <span>computer</span>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="./svg/laptop.svg" alt="" />
-        <span>computer</span>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="./svg/mouse.svg" alt="" />
-        <span>computer</span>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="./svg/cable.svg" alt="" />
-        <span>computer</span>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="./svg/computer.svg" alt="" />
-        <span>computer</span>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="./svg/server.svg" alt="" />
-        <span>computer</span>
-      </SwiperSlide>
+      {items.map((item) => {
+        return (
+          <SwiperSlide key={item.id}>
+            <img src={item.image} alt="" />
+            <span>{item.title}</span>
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 }
