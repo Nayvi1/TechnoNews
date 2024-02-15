@@ -10,15 +10,18 @@ import { useEffect, useState } from "react";
 
 function Header() {
   const [items, setItems] = useState([]);
+  const [error, setError] = useState("");
 
   async function fetchItems() {
     try {
       const res = await fetch("http://localhost:3000/items");
+
+      if (!res.ok) throw new Error("Something went wrong");
       const data = await res.json();
-      console.log(data);
+
       setItems(data);
     } catch (error) {
-      console.error(error);
+      setError(error.message);
     }
   }
 
@@ -77,6 +80,7 @@ function Header() {
                 spaceBetween={30}
                 imgWidth={"w-14"}
                 items={items}
+                error={error}
               />
               <img src="./svg/arrow left.svg" alt="" className="rotate-180" />
             </>
@@ -85,8 +89,8 @@ function Header() {
         <IsMobile
           mobile={
             <>
-              <SwiperContainer items={items} />
-              <SwiperContainer items={items} />
+              <SwiperContainer items={items} error={error} />
+              <SwiperContainer items={items} error={error} />
               <LinkButton />
             </>
           }
@@ -101,6 +105,7 @@ function SwiperContainer({
   spaceBetween = 10,
   width = "auto",
   items = [],
+  error = "",
 }) {
   return (
     <Swiper
@@ -113,14 +118,16 @@ function SwiperContainer({
       modules={[FreeMode]}
       className={`mySwiper ${width} [&_img]:${imgWidth} mt-4 [&_span]:text-[10px] [&_span]:font-p-extraLight [&_.swiper-slide]:w-16 [&_.swiper-slide]:flex [&_.swiper-slide]:flex-col [&_.swiper-slide]:items-center`}
     >
-      {items.map((item) => {
-        return (
-          <SwiperSlide key={item.id}>
-            <img src={item.image} alt="" />
-            <span>{item.title}</span>
-          </SwiperSlide>
-        );
-      })}
+      {error
+        ? error
+        : items.map((item) => {
+            return (
+              <SwiperSlide key={item.id}>
+                <img src={item.image} alt="" />
+                <span>{item.title}</span>
+              </SwiperSlide>
+            );
+          })}
     </Swiper>
   );
 }
