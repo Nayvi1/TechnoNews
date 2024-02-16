@@ -93,7 +93,7 @@ function SocialMedia({ text = "", logo = "", mini = false }) {
       } `}
     >
       <span className="text-xs font-p-extraLight">{text}</span>
-      <img src={`./svg/${logo}.svg`} alt="" />
+      <img src={`/svg/${logo}.svg`} alt="" />
     </div>
   );
 }
