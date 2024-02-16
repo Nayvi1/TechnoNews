@@ -1,12 +1,21 @@
+import { NavLink } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
-function LinkButton({ width = "w-full" }) {
+function LinkButton({
+  width = "w-full",
+  img = "arrow",
+  text = "open the hardware tab",
+  to = "",
+}) {
   return (
-    <button
-      className={`${width} hover:bg-kongFoPanda transition-colors duration-500 p-[10px] bg-semiGray rounded-full mt-4 font-p-semiBold text-sm flex justify-center`}
-    >
-      <span>open the hardware tab</span>
-      <img src="./svg/arrow.svg" alt="" className="ml-12 " />
-    </button>
+    <NavLink className="[&.active>button]:bg-kongFoPanda" to={to}>
+      <button
+        className={`${width} hover:bg-kongFoPanda gap-2 transition-colors duration-500 p-[10px] bg-semiGray rounded-full font-p-semiBold text-sm flex justify-center`}
+      >
+        <span>{text}</span>
+        <img src={`./svg/${img}.svg`} alt="" />
+      </button>
+    </NavLink>
   );
 }
 export default LinkButton;

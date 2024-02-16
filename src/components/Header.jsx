@@ -69,7 +69,7 @@ function Header() {
           <p className="text-xs sm:text-base font-p-extraLight">
             techno tech guides you to make a better choice and buy cheaper
           </p>
-          <IsMobile nonMobile={<LinkButton width="w-max" />} />
+          <IsMobile nonMobile={<LinkButton width="w-max" to="hardware" />} />
         </div>
         <IsMobile
           nonMobile={
@@ -91,7 +91,7 @@ function Header() {
             <>
               <SwiperContainer items={items} error={error} />
               <SwiperContainer items={items} error={error} />
-              <LinkButton />
+              <LinkButton to="hardware" />
             </>
           }
         />

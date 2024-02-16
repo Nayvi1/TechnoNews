@@ -1,5 +1,6 @@
 import { forwardRef, useEffect, useRef, useState } from "react";
 import useMobile from "../hooks/useMobile";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -38,8 +39,9 @@ function Navbar() {
           <NavItems />
         </>
       )}
-
-      <img src="./svg/User.svg" className="cursor-pointer" alt="" />
+      <Link to={"manageAccount"}>
+        <img src="./svg/User.svg" className="cursor-pointer" alt="" />
+      </Link>
       {/* <NavItemsMobile /> */}
     </nav>
   );

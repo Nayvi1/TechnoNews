@@ -12,7 +12,7 @@ function Home() {
   const isMobile = useMobile();
 
   return (
-    <div className="bg-semiBlack">
+    <div className="bg-semiBlack !px-0 [&>*]:px-5 [&>*]:sm:px-11">
       <Navbar />
       <Header />
       <BlogsSlider

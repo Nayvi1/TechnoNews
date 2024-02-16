@@ -1,5 +1,5 @@
 import React from "react";
 
 export const Post = () => {
-  return <div>Post</div>;
+  return <div className="[&>*]:px-5 [&>*]:sm:px-11 ">Post</div>;
 };
