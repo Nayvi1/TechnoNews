@@ -24,3 +24,12 @@
   color: #e7e6e6;
   user-select: none;
 }
+
+.aghayemashhadi {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgb(185, 145, 145);
+}

@@ -13,7 +13,7 @@ import NotificationSetting from "./components/NotificationSetting";
 
 function App() {
   return (
-    <div>
+    <div className="bg-grayFr">
       <div className="max-w-[1440px] mx-auto overflow-hidden relative">
         <Routes>
           <Route index element={<Home />} />
