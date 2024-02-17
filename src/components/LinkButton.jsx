@@ -10,7 +10,7 @@ function LinkButton({
   return (
     <NavLink className="[&.active>button]:bg-kongFoPanda" to={to}>
       <button
-        className={`${width} hover:bg-kongFoPanda gap-2  duration-200 p-[10px] bg-semiGray rounded-full font-p-semiBold text-sm flex justify-center`}
+        className={`${width} hover:bg-kongFoPanda gap-2  duration-200 p-[10px] bg-semiGray rounded-full font-p-semiBold text-sm flex items-center justify-center`}
       >
         <span>{text}</span>
         <img src={`/svg/${img}.svg`} alt="" />

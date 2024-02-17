@@ -4,19 +4,19 @@
 
 @font-face {
   font-family: p-extraLight;
-  src: url("./../fonts/Poppins-ExtraLight.ttf");
+  src: url("/fonts/Poppins-ExtraLight.ttf");
 }
 @font-face {
   font-family: p-semiBold;
-  src: url("./../fonts/Poppins-SemiBold.ttf");
+  src: url("/fonts/Poppins-SemiBold.ttf");
 }
 @font-face {
   font-family: p-regular;
-  src: url("./../fonts/Poppins-Regular.ttf");
+  src: url("/fonts/Poppins-Regular.ttf");
 }
 @font-face {
   font-family: i-medium;
-  src: url("./../fonts/Inter-Medium.ttf");
+  src: url("/fonts/Inter-Medium.ttf");
 }
 
 * {
