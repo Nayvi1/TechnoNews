@@ -3,7 +3,7 @@ import LinkButton from "./LinkButton";
 
 function AccountSetting() {
   return (
-    <div className="flex flex-row-reverse">
+    <div className="flex flex-row-reverse justify-between">
       <div className="flex flex-col gap-16">
         <LinkButton
           text="Change password"
