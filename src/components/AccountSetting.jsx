@@ -3,8 +3,8 @@ import LinkButton from "./LinkButton";
 
 function AccountSetting() {
   return (
-    <div className="flex flex-row-reverse justify-between">
-      <div className="flex flex-col gap-16">
+    <div className="flex flex-row-reverse justify-between gap-6 items-center">
+      <div className="flex flex-col gap-16 min-w-[200px]">
         <LinkButton
           text="Change password"
           img="change password"
@@ -26,7 +26,7 @@ function AccountSetting() {
           to="notificationSetting"
         />
       </div>
-      <div>
+      <div className="w-full">
         <Outlet />
       </div>
     </div>
