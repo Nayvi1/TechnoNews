@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 function Activity({ img = "", number, text = "" }) {
   return (
     <div className="flex flex-col w-40 h-40 rounded-md bg-semiGray items-center py-4">

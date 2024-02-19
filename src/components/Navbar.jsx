@@ -1,7 +1,7 @@
 import { forwardRef, useEffect, useRef, useState } from "react";
 import useMobile from "../hooks/useMobile";
 import { Link } from "react-router-dom";
-
+/* eslint-disable react/prop-types */
 function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const navDiv = useRef();
@@ -62,7 +62,7 @@ const NavItemsMobile = forwardRef(function NavItemsMobile(
       mousedown = true;
       y.current = e.clientY;
     }
-    function handleMouseUp(e) {
+    function handleMouseUp() {
       if (!ref.current) return;
 
       mousedown = false;
@@ -125,7 +125,7 @@ const NavItemsMobile = forwardRef(function NavItemsMobile(
       window.removeEventListener("mousemove", handleMouseMove);
       // handler.current.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [ref, setIsNavbarOpen]);
 
   function handleClick() {
     setIsNavbarOpen(false);
